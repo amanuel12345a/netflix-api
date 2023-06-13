@@ -20,9 +20,9 @@ mongoose
   .catch((err) => {
     console.log(err.message);
   });
-
 app.use("/api/user", userRoutes);
 
-app.listen(PORT, () => {
+
+app.listen(8081, () => {
   console.log("server started on port 5000");
 });

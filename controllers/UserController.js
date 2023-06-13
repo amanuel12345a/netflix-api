@@ -5,6 +5,7 @@ module.exports.getLikedMovies = async (req, res) => {
     const { email } = req.params;
     const user = await await User.findOne({ email });
     if (user) {
+      console.log(user)
       return res.json({ msg: "success", movies: user.likedMovies });
     } else return res.json({ msg: "User with given email not found." });
   } catch (error) {
