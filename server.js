@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const userRoutes = require("./routes/UserRouter");
+const verify = require("./routes/verify.route");
+
 const mongoose = require("mongoose");
 const env = require('dotenv').config()
 const PORT = process.env.PORT || 8081;
@@ -21,6 +23,8 @@ mongoose
     console.log(err.message);
   });
 app.use("/api/user", userRoutes);
+app.use("/", verify);
+
 
 
 app.listen(8081, () => {
