@@ -31,7 +31,7 @@ module.exports.verify = async (req,res) => {
     try{
         const user = await userinfo.findOneAndUpdate({token:token},{verify:true})
         console.log(user)
-        if(user.verify == true)
+        if(user.verify)
         {
             return res.redirect("https://amanuel-fawn-kappa.vercel.app/login")
         }
