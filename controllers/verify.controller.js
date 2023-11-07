@@ -1,7 +1,7 @@
 const userinfo = require('../models/verify.model')
 const User = require("../models/UserModel");
 const nodemailer = require('nodemailer');
-const website = 'netfilx.com'
+const website = 'https://amanuel-fawn-kappa.vercel.app/'
 async function sendEmail(toEmail, subject, text, fromEmail, fromPass) {
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
