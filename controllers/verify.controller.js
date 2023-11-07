@@ -33,7 +33,7 @@ module.exports.verify = async (req,res) => {
         console.log(user)
         if(user.verify)
         {
-            return res.redirect("https://amanuel-fawn-kappa.vercel.app/login")
+            res.send(true)
         }
         
         // const verified = await new User({email:user.email})
