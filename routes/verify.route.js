@@ -4,3 +4,5 @@ router.get('/:token',verify)
 router.post('/signup',userData)
 router.post("/login",login)
 module.exports = router
+
+
